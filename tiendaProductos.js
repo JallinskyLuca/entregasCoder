@@ -4,7 +4,7 @@ https://developer.mozilla.org/es/docs/Web/JavaScript
  donde aprendi como usar push, length, toFixed, \n etc.
  espero que le guste. Gracias por tomarse el timpo*/
 
- // Muestro los productos disponibles y sus precios. los almaceno en el array "productos"
+ // Productos disponibles y sus precios. los almaceno en el array "productos"
 const productos = [
     { nombre: "Remera", precio: 200 },
     { nombre: "Pantalón", precio: 400 },
@@ -14,7 +14,7 @@ const productos = [
     { nombre: "Campera", precio: 800 }
 ];
 
-// Muestro los productos disponibles
+// Funcion para mostrar los productos disponibles
 function mostrarProductos() {
     let mensaje = "Productos disponibles:\n";
     for (let i = 0; i < productos.length; i++) {
@@ -23,13 +23,13 @@ function mostrarProductos() {
     return mensaje;
 }
 
-// Function para agregar un producto al carrito
+// Funcion para agregar un producto al carrito
 function agregarAlCarrito(carrito, idProducto) {
     const producto = productos[idProducto - 1]; // Buscamos el producto en el array
     carrito.push(producto); // Lo agregamos al carrito
 }
 
-// Funtion para calcular el total del carrito
+// Funcion para calcular el total del carrito
 function calcularTotal(carrito) {
     let total = 0;
     for (let i = 0; i < carrito.length; i++) {
@@ -38,7 +38,7 @@ function calcularTotal(carrito) {
     return total;
 }
 
-// Function para aplicar un descuento si el total del carrito es mayor o igual a $1000
+// Funcion para aplicar un descuento si el total del carrito es mayor o igual a $1000
 function aplicarDescuento(total) {
     if (total >= 1000) {
         return total * 0.9; // Descuento del 10%
@@ -47,7 +47,7 @@ function aplicarDescuento(total) {
     }
 }
 
-// Funtion principal del simulador de compras, al final del programa llamo a "simularCompra"
+// Funcion principal del simulador de compras, al final del programa llamo a "simularCompra"
 function simularCompra() {
     let carrito = [];
     let continuar = true;
